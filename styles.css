@@ -1,0 +1,133 @@
+/* 💎 Importerer Google Font: Poppins for en moderne look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 🎨 Global styling - Nullstiller marginer og setter fonten for hele siden */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* 🌌 Blå gradientbakgrunn for frisk look */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* 🏗 Main container for hele innholdet */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;           /* 📏 Mellomrom mellom seksjoner */
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* 💠 Container for de vanlige boksene */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;    /* 📱 Gjør oppsettet responsivt ved å tillate radbryting */
+  gap: 70px;          /* 📏 Avstand mellom boksene */
+}
+
+/* 🏆 Super-container for superboksen */
+.super-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;   /* 📏 Øker mellomrommet mellom superboksen og de vanlige boksene */
+}
+
+/* 📦 Felles stil for alle boksene (vanlige + superboksen) */
+.boks, .superboks {
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 🌫 Myk skygge for dybde */
+  transition: all 0.6s ease-in-out;           /* ✨ Glidende overgang på alle egenskaper */
+  margin-top: 70px;
+}
+
+/* ✨ Hover-effekt: Legger til glød og dypere skygge for ekstra effekt */
+.boks:hover, .superboks:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* 🎨 Boks 1 - Endrer farge og størrelse ved hover */
+.boks-1:hover {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  color: white;
+}
+
+/* 🌀 Boks 2 - Roterer 360 grader med en spenstig timing-funksjon */
+.boks-2 {
+  transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.5s ease-in-out;
+}
+.boks-2:hover {
+  transform: rotate(360deg);
+  background-color: palegreen;
+}
+
+/* 📏 Boks 3 - Skaleringseffekt ved hover (vokser 50%) */
+.boks-3:hover {
+  transform: scale(1.5);
+  background-color: lightcoral;
+  color: white;
+}
+
+/* 🌫 Boks 4 - Dynamisk skyggeeffekt + "løfte"-bevegelse */
+.boks-4 {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.boks-4:hover {
+  transform: translateY(-10px);                  /* 📈 Løfter boksen oppover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);    /* 🌫 Legger til skygge for dybdeeffekt */
+  background-color: lightseagreen;
+  color: white;
+}
+
+/* 🏆 SUPERBOKS - Kombinasjon av fargeendring, skalering, rotasjon og skygge */
+.superboks {
+  width: 150px;
+  height: 150px;
+  background-color: gold;
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: 
+    background 1s ease-in-out,        /* 🎨 Fargeendring */
+    opacity 0.5s ease-in-out,         /* 🌫 Gjennomsiktighet */
+    transform 0.6s ease-in-out,       /* 🌀 Rotasjon + Skalering */
+    box-shadow 0.6s ease-in-out;      /* 🌫 Skyggeendring */
+}
+
+/* 🌈 SUPERBOKS Hover - Gradientfarge, opacity, rotasjon og glød */
+.superboks:hover {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* 🌈 Gradientfarge */
+  opacity: 0.85;                                        /* 🌫 Litt gjennomsiktig */
+  transform: scale(1.2) rotate(720deg);                 /* 🌀 Dobbel rotasjon + skalering */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),           /* 🌫 Dyp skygge + glød */
+              0 0 30px rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+
